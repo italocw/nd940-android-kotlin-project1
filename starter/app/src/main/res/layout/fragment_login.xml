@@ -47,16 +47,18 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/sign_in_button"
+                    android:id="@+id/create_account_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/action_sign_in_short" />
+                    android:text="@string/action_create_account" />
 
                 <Button
-                    android:id="@+id/sign_up_button"
+                    android:id="@+id/login_button"
+                    android:theme="@style/CustomButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/action_sign_up" />
+                    android:text="@string/login" />
+
             </LinearLayout>
 
         </LinearLayout>
