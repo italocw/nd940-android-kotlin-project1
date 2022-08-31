@@ -11,21 +11,27 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:theme="@style/TextAppearance.AppCompat.Headline"
                 android:text="@string/instructions" />
 
             <TextView
                 android:layout_width="match_parent"
+                android:theme="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_height="match_parent"
                 android:text="@string/instructions_message" />
 
             <Button
+                android:layout_gravity="end"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/see_instructions">
+                android:text="@string/show_shoe_list"
+                android:theme="@style/CustomButton">
 
             </Button>
         </LinearLayout>
