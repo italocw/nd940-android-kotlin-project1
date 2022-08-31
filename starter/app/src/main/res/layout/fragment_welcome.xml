@@ -12,12 +12,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="top"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/portrait_image_height"
+                android:src="@drawable/welcome_image"></ImageView>
             <TextView
+                android:theme="@style/TextAppearance.AppCompat.Headline"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/welcome" />
 
             <TextView
+                android:theme="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/welcome_message" />
