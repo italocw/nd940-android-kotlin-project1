@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".login.LoginFragment">
+    tools:context=".welcome.IntroductionsFragment">
 
     <data>
-
         <variable
             name="loginViewModel"
             type="com.udacity.shoestore.login.LoginViewModel" />
@@ -47,10 +46,12 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:layout_margin="@dimen/fragment_horizontal_margin"
+                android:gravity="center"
+                                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/create_account_button"
@@ -62,7 +63,6 @@
                 <Button
                     android:id="@+id/login_button"
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content"
                     android:onClick="@{() -> loginViewModel.onLogin()}"
                     android:text="@string/login"

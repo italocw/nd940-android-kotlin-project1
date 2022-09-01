@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".WelcomeFragment">
+    <data>
+        <variable
+            name="welcomeViewModel"
+            type="com.udacity.shoestore.welcome.WelcomeViewModel" />
+    </data>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -12,33 +16,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <ImageView
-                android:layout_gravity="top"
-                android:scaleType="centerCrop"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/portrait_image_height"
-                android:src="@drawable/welcome_image"></ImageView>
-            <TextView
-                android:theme="@style/TextAppearance.AppCompat.Headline"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/welcome" />
+                android:layout_gravity="top"
+                android:scaleType="centerCrop"
+                android:src="@drawable/welcome_image" />
 
             <TextView
-                android:theme="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/welcome_message" />
+                android:text="@string/welcome_title"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+               />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/welcome_message"
+
+                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+
+                />
 
             <Button
-android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/fragment_horizontal_margin"
 
-            android:layout_width="wrap_content"
-            android:theme="@style/CustomButton"
-
-            android:layout_height="wrap_content"
-                android:text="@string/see_instructions">
-
+                android:onClick="@{() -> welcomeViewModel.onSeeInstructions()}"
+                android:text="@string/see_instructions"
+                android:theme="@style/CustomButton">
             </Button>
         </LinearLayout>
 
