@@ -18,10 +18,10 @@ class ShoeDetailViewModel : ViewModel() {
     val name: LiveData<String>
         get() = _name
 
-    private val _size = MutableLiveData<String>()
-    val size: LiveData<String>
+    private val _size = MutableLiveData<Double>()
+    val size: LiveData<Double>
         get() = _size
-   
+
     private val _company = MutableLiveData<String>()
     val company: LiveData<String>
         get() = _company
@@ -33,19 +33,19 @@ class ShoeDetailViewModel : ViewModel() {
 
 
 
-    fun onSave() {
+    fun onCancel() {
             _eventCancel.value = true
     }
 
-    fun onSaveComplete() {
+    fun onCancelComplete() {
         _eventCancel.value = false
     }
-    
-    fun onCancel() {
+
+    fun onSave() {
         _eventSave.value = true
     }
-    
-    fun onCancelComplete() {
+
+    fun onSaveComplete() {
         _eventSave.value = false
     }
 }

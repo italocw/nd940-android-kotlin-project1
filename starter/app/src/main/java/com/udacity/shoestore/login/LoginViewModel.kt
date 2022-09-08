@@ -4,8 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class LoginViewModel : ViewModel() {
-
+class LoginViewModel() : ViewModel() {
     private val _eventLogin = MutableLiveData<Boolean>()
     val eventLogin: LiveData<Boolean>
         get() = _eventLogin
@@ -24,7 +23,7 @@ class LoginViewModel : ViewModel() {
         get() = _eventCreateAccount
 
     fun onLogin() {
-            _eventLogin.value = true
+        _eventLogin.value = true
     }
 
     fun onCreateAccount() {
@@ -38,4 +37,6 @@ class LoginViewModel : ViewModel() {
     fun onCreateAccountComplete() {
         _eventCreateAccount.value = false
     }
+
+
 }

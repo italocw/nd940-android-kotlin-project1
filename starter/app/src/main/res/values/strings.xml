@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Shoe Store</string>
-    <!-- Strings related to login -->
+
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -13,10 +13,10 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
 
-    <string name="welcome_message">This is the welcome message</string>
+    <string name="welcome_message">Welcome to the shoe store! See the use instructions on the next screen!</string>
     <string name="see_instructions">See instructions</string>
-    <string name="instructions">Instruções</string>
-    <string name="instructions_message">Texto das instruções</string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_message">You can use the app to see the available shoes in the store. Use the add button to add new shoes</string>
     <string name="show_shoe_list">Show shoe list</string>
     <string name="logout">Logout</string>
     <string name="add_a_new_shoe">Add a new shoe</string>

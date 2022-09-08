@@ -4,6 +4,7 @@
     tools:context=".welcome.IntroductionsFragment">
 
     <data>
+
         <variable
             name="loginViewModel"
             type="com.udacity.shoestore.login.LoginViewModel" />
@@ -23,11 +24,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/action_sign_in_short"
-                android:inputType="textEmailAddress"
                 android:text="@string/action_sign_in_short">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+                    android:inputType="textEmailAddress"
+
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -36,11 +38,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_password"
-                android:inputType="textPassword"
                 android:text="@string/prompt_password">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+                    android:inputType="textPassword"
+
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,7 +54,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/fragment_horizontal_margin"
                 android:gravity="center"
-                                android:orientation="horizontal">
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/create_account_button"

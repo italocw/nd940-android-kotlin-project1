@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/show_shoe_list"
-                android:onClick="@{() -> instructionsViewModel.onSeeStoreList()}"
+                android:onClick="@{() -> instructionsViewModel.onSeeShoeList()}"
                 android:theme="@style/CustomButton">
 
             </Button>

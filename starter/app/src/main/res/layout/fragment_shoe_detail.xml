@@ -4,6 +4,7 @@
     tools:context=".ShoeDetailFragment">
 
     <data>
+
         <variable
             name="shoeDetailViewModel"
             type="com.udacity.shoestore.shoe_detail.ShoeDetailViewModel" />
@@ -22,48 +23,56 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/name"
-                android:inputType="textPersonName"
                 android:text="@string/name">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name_text"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+
+                    android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/company"
-                android:inputType="textCapSentences"
                 android:text="@string/company">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/company_text"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/size"
-                android:inputType="number"
                 android:text="@string/size">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/size_text"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/description"
-                android:inputType="text"
                 android:text="@string/description">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/description_text"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
@@ -78,12 +87,14 @@
                     android:id="@+id/cancel_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> shoeDetailViewModel.onCancel()}"
                     android:text="@android:string/cancel" />
 
                 <Button
                     android:id="@+id/save_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> shoeDetailViewModel.onSave()}"
                     android:text="@string/save"
                     android:theme="@style/CustomButton" />
             </LinearLayout>

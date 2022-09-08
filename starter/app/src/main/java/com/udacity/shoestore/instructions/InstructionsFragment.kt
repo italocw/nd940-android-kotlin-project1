@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentInstructionsBinding
-
 class InstructionsFragment : Fragment() {
 
     private lateinit var viewModel: InstructionsViewModel
@@ -28,12 +27,13 @@ class InstructionsFragment : Fragment() {
         binding.instructionsViewModel = viewModel
         binding.lifecycleOwner = this
 
-        viewModel.eventSeeStoreList.observe(viewLifecycleOwner) { seeInstructions ->
-            if (seeInstructions) {
+        viewModel.eventSeeShoeList.observe(viewLifecycleOwner) { seeShoeList ->
+            if (seeShoeList) {
                 findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment())
-                viewModel.onSeeStoreListComplete()
+                viewModel.onSeeShoeListComplete()
             }
         }
+
 
         return binding.root
     }

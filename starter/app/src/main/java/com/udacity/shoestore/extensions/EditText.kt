@@ -1,5 +1,6 @@
 package com.udacity.shoestore.extensions
 
+import android.widget.EditText
 import com.udacity.shoestore.RegexPattern.EMAIL
 
-fun String.isValidEmail() = matches(Regex(EMAIL))
+fun EditText.toString() =text.toString()

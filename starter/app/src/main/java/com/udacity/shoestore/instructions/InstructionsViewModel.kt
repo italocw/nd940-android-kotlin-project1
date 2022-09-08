@@ -6,17 +6,17 @@ import androidx.lifecycle.ViewModel
 
 class InstructionsViewModel : ViewModel() {
 
-    private val _eventSeeStoreList = MutableLiveData<Boolean>()
-    val eventSeeStoreList: LiveData<Boolean>
-        get() = _eventSeeStoreList
+    private val _eventSeeShoeList = MutableLiveData<Boolean>()
+    val eventSeeShoeList: LiveData<Boolean>
+        get() = _eventSeeShoeList
 
 
-    fun onSeeStoreList() {
-        _eventSeeStoreList.value = true
+    fun onSeeShoeList() {
+        _eventSeeShoeList.value = true
     }
 
-    fun onSeeStoreListComplete() {
-        _eventSeeStoreList.value = false
+    fun onSeeShoeListComplete() {
+        _eventSeeShoeList.value = false
     }
 
 }
