@@ -38,8 +38,7 @@ class ShoeDetailFragment : Fragment() {
 
         viewModel.eventCancel.observe(viewLifecycleOwner) { cancel ->
             if (cancel) {
-                requireActivity().onBackPressed()
-
+                findNavController().navigateUp()
                 viewModel.onCancelComplete()
             }
         }
