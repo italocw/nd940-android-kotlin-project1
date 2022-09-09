@@ -36,9 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/welcome_message"
-
                 android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-
                 />
 
             <Button

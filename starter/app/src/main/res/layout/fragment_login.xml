@@ -8,6 +8,15 @@
         <variable
             name="loginViewModel"
             type="com.udacity.shoestore.login.LoginViewModel" />
+
+        <variable
+            name="email"
+            type="String" />
+
+        <variable
+            name="password"
+            type="String" />
+
     </data>
 
     <ScrollView
@@ -24,14 +33,14 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/login"
-                android:text="@string/login">
+                android:hint="@string/prompt_email"
+                android:text="@string/prompt_email">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-
-                    android:layout_height="wrap_content" />
+                    android:text="@={email}" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -43,9 +52,9 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="textPassword"
-
-                    android:layout_height="wrap_content" />
+                    android:text="@={password}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- An additional linear layout was needed to display the buttons aligned, side-by-side - so it has a horizontal orientation . Use a  View Group as Linear Layouts helps to adjust things about the children like if they were one only element"   -->

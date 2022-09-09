@@ -46,14 +46,9 @@ class ShoeDetailFragment : Fragment() {
 
         viewModel.eventSave.observe(viewLifecycleOwner) { save ->
             if (save) {
-                val name = binding.nameText.text.toString()
-                val size = binding.sizeText.text.toString().toDouble()
-                val description = binding.descriptionText.text.toString()
-                val company = binding.companyText.text.toString()
 
-                val shoe = Shoe(name, size, company, description, listOf())
-
-               mainViewModel.onAddNewShoe(shoe)
+                val shoe = Shoe(binding.nameText.text.toString(),binding.sizeText.text.toString().toDouble(),binding.companyText.text.toString(),binding.descriptionText.text.toString())
+                mainViewModel.onAddNewShoe(shoe)
 
                 findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
                 viewModel.onSaveComplete()
