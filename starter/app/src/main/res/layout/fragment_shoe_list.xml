@@ -14,6 +14,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <!-- Vertical Linear layout was used to display each new shoe that will be added vertically aligned one after the previously added shoe   -->
 
         <LinearLayout
             android:id="@+id/shoe_list_linear_layout"

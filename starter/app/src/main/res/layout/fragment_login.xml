@@ -13,6 +13,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <!-- Vertical Linear layout was used to display each child view placed vertically aligned after the previous created child  -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,8 +24,8 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/action_sign_in_short"
-                android:text="@string/action_sign_in_short">
+                android:hint="@string/login"
+                android:text="@string/login">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -47,6 +48,7 @@
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- An additional linear layout was needed to display the buttons aligned, side-by-side - so it has a horizontal orientation . Use a  View Group as Linear Layouts helps to adjust things about the children like if they were one only element"   -->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="@{() -> loginViewModel.onLogin()}"
-                    android:text="@string/login"
+                    android:text="@string/action_sign_in_short"
                     android:theme="@style/CustomButton" />
 
             </LinearLayout>
